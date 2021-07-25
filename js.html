@@ -15,19 +15,18 @@
         console.log(randomNumber);
         if (randomNumber === 1) {
             return Output = "rock"
-            //console.log(Output)
+            
         }
         else if (randomNumber === 2) {
             return Output = "paper"
-            //console.log(Output)
         }
         else {
             return Output = "scissors"
-            //console.log(Output)
+
         }
     }
     
-   console.log("comp: " + computerPlay())
+
 
    function playRound(playerSelection, computerSelection) {
        if(playerSelection === "rock" && computerSelection === "rock") {
@@ -42,9 +41,23 @@
            return result = "Player Wins!";
            //console.log(result);
        }
-       else {
-           return result = "End of test";
+       else if(playerSelection === "paper" && computerSelection === "rock") {
+           return result = "Player Wins!"
        }
+       else if(playerSelection === "Paper" && computerSelection === "paper") {
+           return result = "Its a tie!"
+       }
+       else if(playerSelection === "paper" && computerSelection === "scissors") {
+           return result = "Computer Wins!"
+       } 
+       else if(playerSelection === "scissors" && computerSelection === "rock") {
+           return result = "Computer Wins!"
+       }
+       else if(playerSelection === "scissors" && computerSelection === "paper") {
+           return result = "Player Wins!"
+       }
+       else 
+       return result = "Its a tie!"
    }
     
 

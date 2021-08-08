@@ -12,7 +12,7 @@
 
     function computerPlay() {
         let randomNumber = Math.floor(Math.random() * 3) + 1;
-        console.log(randomNumber);
+        //console.log(randomNumber);
         if (randomNumber === 1) {
             return Output = "rock"
             
@@ -68,13 +68,26 @@
    const playerSelection = "ROCK";
    let computerSelection = computerPlay();
    let i = 0
-   let score = 0
-   //console.log(playRound(playerSelection, computerSelection));
+   let playerScore = 0
+   let computerScore = 0
+   let tieScore = 0
    console.log("Player: " + playerSelection);
 
    function game() {
     while (i < 5) {
         console.log(playRound(playerSelection, computerPlay()));
+        if(result === "Player Wins!") {
+          playerScore += 1;
+        }
+        else if(result === "Computer Wins!") {
+          computerScore += 1;
+        }
+        else if(result === "Its a tie!") {
+          tieScore += 1;
+        }
+        else 
+          return
+        console.log("Player's Score: " + playerScore + " " + "Computer's Score: " + computerScore + " " + "Ties: " + tieScore)
         i++;
 }
    }

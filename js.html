@@ -9,7 +9,7 @@
 
     <script>
 
-
+    //grabs a random number one through 3 and then gives it a strong value rock,paper, or scissors
     function computerPlay() {
         let randomNumber = Math.floor(Math.random() * 3) + 1;
         //console.log(randomNumber);
@@ -27,7 +27,7 @@
     }
     
 
-
+   //takes the strings from computerPlay and compares them, giving an outcome based on who wins, or if there is a tie 
    function playRound(playerSelection, computerSelection) {
        console.log(playerSelection);
        console.log(computerSelection);
@@ -73,6 +73,7 @@
    let tieScore = 0
    console.log("Player: " + playerSelection);
 
+   //a func that plays the game over and over, and asks for player input, at the end of each round, the tally is sown
    function game() {
     while (i < 5) {
         let playerSelection = prompt("Rock, Paper, or Scissors?");;
